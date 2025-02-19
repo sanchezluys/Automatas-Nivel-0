@@ -307,7 +307,7 @@ Diseña un Autómata Finito Determinista (AFD) que acepte cadenas sobre el alfab
 
 3.  **Diagrama de Estados:**
 
-![alt text](/0_Introduccion/image.png)
+![alt text](0_Introduccion/image.png)
 
 
 *   **Explicación:** El autómata comienza en q0 (par). Cada vez que ve una 'a', cambia de estado. Si termina en q1 al final de la cadena, significa que ha visto un número impar de 'a's, y la cadena es aceptada.
