@@ -337,7 +337,7 @@ Diseña un Autómata Finito No Determinista (AFN) que acepte cadenas sobre el al
 
 3.  **Diagrama de Estados:**
 
-![alt text](/0_Introduccion/image-1.png)
+![alt text](0_Introduccion/image-1.png)
 
 *   **Explicación:** El autómata "busca" la secuencia "aba". Una vez que la encuentra, pasa al estado de aceptación y permanece allí, aceptando cualquier cadena que contenga "aba".
 
