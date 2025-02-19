@@ -279,6 +279,8 @@ Los AFNs son útiles para buscar patrones con cierta flexibilidad. Por ejemplo, 
 
 Imagina que quieres crear un filtro de spam que detecte correos electrónicos que contengan ciertas palabras clave (como "viagra" o "oferta"). ¿Cómo podrías usar los autómatas para esto? (Describe la idea general, no necesitas diseñar el autómata completo).
 
+ok
+
 ===
 
 #### 6. Ejercicios Resueltos de Autómatas. 📝
