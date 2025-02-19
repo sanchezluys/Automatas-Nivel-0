@@ -279,25 +279,19 @@ Los AFNs son útiles para buscar patrones con cierta flexibilidad. Por ejemplo, 
 
 Imagina que quieres crear un filtro de spam que detecte correos electrónicos que contengan ciertas palabras clave (como "viagra" o "oferta"). ¿Cómo podrías usar los autómatas para esto? (Describe la idea general, no necesitas diseñar el autómata completo).
 
-ok
-
 ===
 
 #### 6. Ejercicios Resueltos de Autómatas. 📝
 
----
+===
 
 ##### Ejercicio 1: AFD para Cadenas con un Número Impar de 'a's
-
-**Página 1: Ejercicio**
 
 Diseña un Autómata Finito Determinista (AFD) que acepte cadenas sobre el alfabeto Σ = {a, b} que contengan un número impar de 'a's.
 
 ---
 
 **Página 2: Solución Explicada**
-
-**Solución:**
 
 1.  **Estados:** Necesitamos dos estados:
     *   q0: Representa haber visto un número par de 'a's (estado inicial).
@@ -307,9 +301,12 @@ Diseña un Autómata Finito Determinista (AFD) que acepte cadenas sobre el alfab
     *   Si estamos en q0 y leemos una 'b', permanecemos en q0.
     *   Si estamos en q1 y leemos una 'a', pasamos a q0.
     *   Si estamos en q1 y leemos una 'b', permanecemos en q1.
+
+---
+
 3.  **Diagrama de Estados:**
 
-    ```mermaid
+```mermaid
     graph LR
         q0((q0)) -- a --> q1((q1))
         q0 -- b --> q0
@@ -319,11 +316,11 @@ Diseña un Autómata Finito Determinista (AFD) que acepte cadenas sobre el alfab
         classDef accept fill:#ccf,stroke:#333,stroke-width:2px;
         class q1 accept
         class q0 start
-    ```
+```
 
-    *   **Explicación:** El autómata comienza en q0 (par). Cada vez que ve una 'a', cambia de estado. Si termina en q1 al final de la cadena, significa que ha visto un número impar de 'a's, y la cadena es aceptada.
+*   **Explicación:** El autómata comienza en q0 (par). Cada vez que ve una 'a', cambia de estado. Si termina en q1 al final de la cadena, significa que ha visto un número impar de 'a's, y la cadena es aceptada.
 
----
+===
 
 ##### Ejercicio 2: AFN para Cadenas que Contienen la Subcadena "aba"
 
