@@ -429,7 +429,7 @@ Dado el siguiente AFN, conviértelo a un AFD equivalente:
 
 **AFD Resultante:**
 
-*   Estados: {{q0}, {q0, q1}}
+*   Estados: { {q0}, {q0, q1} }
 *   Alfabeto: {0, 1}
 *   Estado Inicial: {q0}
 *   Estado de Aceptación: {{q0, q1}}
