@@ -281,7 +281,7 @@ Imagina que quieres crear un filtro de spam que detecte correos electrónicos qu
 
 ===
 
-#### 6. Ejercicios Resueltos de Autómatas
+#### 6. Ejercicios Resueltos de Autómatas. 📝
 
 ---
 
