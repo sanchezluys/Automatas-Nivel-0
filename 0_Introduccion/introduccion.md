@@ -278,3 +278,212 @@ Los AFNs son útiles para buscar patrones con cierta flexibilidad. Por ejemplo, 
 ##### Caso Práctico (El Filtro de Spam 🗑️):
 
 Imagina que quieres crear un filtro de spam que detecte correos electrónicos que contengan ciertas palabras clave (como "viagra" o "oferta"). ¿Cómo podrías usar los autómatas para esto? (Describe la idea general, no necesitas diseñar el autómata completo).
+
+===
+
+#### 6. Ejercicios Resueltos de Autómatas
+
+---
+
+##### Ejercicio 1: AFD para Cadenas con un Número Impar de 'a's
+
+**Página 1: Ejercicio**
+
+Diseña un Autómata Finito Determinista (AFD) que acepte cadenas sobre el alfabeto Σ = {a, b} que contengan un número impar de 'a's.
+
+---
+
+**Página 2: Solución Explicada**
+
+**Solución:**
+
+1.  **Estados:** Necesitamos dos estados:
+    *   q0: Representa haber visto un número par de 'a's (estado inicial).
+    *   q1: Representa haber visto un número impar de 'a's (estado de aceptación).
+2.  **Transiciones:**
+    *   Si estamos en q0 y leemos una 'a', pasamos a q1.
+    *   Si estamos en q0 y leemos una 'b', permanecemos en q0.
+    *   Si estamos en q1 y leemos una 'a', pasamos a q0.
+    *   Si estamos en q1 y leemos una 'b', permanecemos en q1.
+3.  **Diagrama de Estados:**
+
+    ```mermaid
+    graph LR
+        q0((q0)) -- a --> q1((q1))
+        q0 -- b --> q0
+        q1 -- a --> q0
+        q1 -- b --> q1
+        classDef start fill:#f9f,stroke:#333,stroke-width:2px;
+        classDef accept fill:#ccf,stroke:#333,stroke-width:2px;
+        class q1 accept
+        class q0 start
+    ```
+
+    *   **Explicación:** El autómata comienza en q0 (par). Cada vez que ve una 'a', cambia de estado. Si termina en q1 al final de la cadena, significa que ha visto un número impar de 'a's, y la cadena es aceptada.
+
+---
+
+##### Ejercicio 2: AFN para Cadenas que Contienen la Subcadena "aba"
+
+**Página 1: Ejercicio**
+
+Diseña un Autómata Finito No Determinista (AFN) que acepte cadenas sobre el alfabeto Σ = {a, b} que contengan la subcadena "aba".
+
+---
+
+**Página 2: Solución Explicada**
+
+**Solución:**
+
+1.  **Estados:**
+    *   q0: Estado inicial (no hemos visto nada relevante aún).
+    *   q1: Hemos visto una 'a'.
+    *   q2: Hemos visto "ab".
+    *   q3: Hemos visto "aba" (estado de aceptación).
+2.  **Transiciones:**
+    *   Desde q0, con 'a', vamos a q1.  También podemos permanecer en q0 con 'a' o 'b' (para ignorar símbolos al principio).
+    *   Desde q1, con 'b', vamos a q2.
+    *   Desde q2, con 'a', vamos a q3.
+    *   Desde q3, podemos permanecer en q3 con 'a' o 'b' (para aceptar cualquier cosa después de "aba").
+3.  **Diagrama de Estados:**
+
+    ```mermaid
+    graph LR
+        q0((q0)) -- a --> q1(q1)
+        q0 -- b --> q0
+        q0 -- a --> q0
+        q1 -- b --> q2(q2)
+        q2 -- a --> q3((q3))
+         q3 -- a --> q3
+         q3 -- b --> q3
+        classDef start fill:#f9f,stroke:#333,stroke-width:2px;
+        classDef accept fill:#ccf,stroke:#333,stroke-width:2px;
+        class q3 accept
+        class q0 start
+    ```
+
+    *   **Explicación:** El autómata "busca" la secuencia "aba". Una vez que la encuentra, pasa al estado de aceptación y permanece allí, aceptando cualquier cadena que contenga "aba".
+
+---
+
+##### Ejercicio 3: Expresión Regular para Cadenas que Empiezan con 'a' y Terminan con 'b'
+
+**Página 1: Ejercicio**
+
+Escribe una expresión regular que describa el lenguaje de todas las cadenas sobre el alfabeto Σ = {a, b} que comienzan con 'a' y terminan con 'b'.
+
+---
+
+**Página 2: Solución Explicada**
+
+**Solución:**
+
+La expresión regular es: `a(a|b)*b`
+
+*   **a:** La cadena debe comenzar con 'a'.
+*   `(a|b)*`:  Después de la 'a' inicial, puede haber cualquier número (cero o más) de 'a's o 'b's.  `(a|b)` significa "a o b", y `*` significa "cero o más repeticiones".
+*   **b:** La cadena debe terminar con 'b'.
+
+**Ejemplos de cadenas aceptadas:**
+
+*   ab
+*   aab
+*   abb
+*   aaabb
+*   ababab
+
+---
+
+##### Ejercicio 4: Convertir un AFN a AFD (Simplificado)
+
+**Página 1: Ejercicio**
+
+Dado el siguiente AFN, conviértelo a un AFD equivalente:
+
+*   Estados: {q0, q1}
+*   Alfabeto: {0, 1}
+*   Estado Inicial: q0
+*   Estado de Aceptación: q1
+*   Transiciones:
+    *   δ(q0, 0) = {q0, q1}
+    *   δ(q0, 1) = {q0}
+    *   δ(q1, 0) = {} (conjunto vacío)
+    *   δ(q1, 1) = {q1}
+
+---
+
+**Página 2: Solución Explicada**
+
+**Solución:**
+
+1.  **Estado Inicial del AFD:** {q0}
+2.  **Transiciones desde {q0}:**
+    *   Con 0: δ({q0}, 0) = {q0, q1} (nuevo estado del AFD)
+    *   Con 1: δ({q0}, 1) = {q0} (estado ya existente)
+3.  **Transiciones desde {q0, q1}:**
+    *   Con 0: δ({q0, q1}, 0) = δ(q0, 0) ∪ δ(q1, 0) = {q0, q1} ∪ {} = {q0, q1} (estado ya existente)
+    *   Con 1: δ({q0, q1}, 1) = δ(q0, 1) ∪ δ(q1, 1) = {q0} ∪ {q1} = {q0, q1} (estado ya existente)
+4.  **Estados de Aceptación del AFD:** {q0, q1} (porque contiene q1, que es un estado de aceptación del AFN)
+
+**AFD Resultante:**
+
+*   Estados: {{q0}, {q0, q1}}
+*   Alfabeto: {0, 1}
+*   Estado Inicial: {q0}
+*   Estado de Aceptación: {{q0, q1}}
+*   Transiciones:
+    *   δ({q0}, 0) = {q0, q1}
+    *   δ({q0}, 1) = {q0}
+    *   δ({q0, q1}, 0) = {q0, q1}
+    *   δ({q0, q1}, 1) = {q0, q1}
+
+---
+
+##### Ejercicio 5:  Lenguaje Aceptado por un AFD Dado
+
+**Página 1: Ejercicio**
+
+Describe en palabras el lenguaje aceptado por el siguiente AFD:
+
+*   Estados: {q0, q1, q2}
+*   Alfabeto: {a, b}
+*   Estado Inicial: q0
+*   Estado de Aceptación: {q2}
+*   Transiciones:
+    *   δ(q0, a) = q1
+    *   δ(q0, b) = q0
+    *   δ(q1, a) = q1
+    *   δ(q1, b) = q2
+    *   δ(q2, a) = q1
+    *   δ(q2, b) = q2
+
+---
+
+**Página 2: Solución Explicada**
+
+**Solución:**
+
+El AFD acepta todas las cadenas que contienen al menos una 'a' seguida inmediatamente por una 'b'.
+
+*   **Explicación:**
+    *   Desde el estado inicial q0, el autómata permanece en q0 si lee una 'b'.
+    *   Si lee una 'a', pasa al estado q1.
+    *   Desde q1, si lee una 'b', pasa al estado de aceptación q2.
+    *   Una vez en q2, el autómata permanece en q2 sin importar si lee 'a' o 'b'.
+
+**Ejemplos de cadenas aceptadas:**
+
+*   ab
+*   aab
+*   bab
+*   bbab
+*   aaabbb
+
+**Ejemplos de cadenas rechazadas:**
+
+*   a
+*   b
+*   bb
+*   aaa
+
+---
