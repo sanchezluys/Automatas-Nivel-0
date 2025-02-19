@@ -19,15 +19,15 @@
 
 ```mermaid
 graph LR
-    A[Alfabeto (Σ)] -- Contiene --> B(Símbolos);
-    C[Cadena (String)] -- Compuesta por --> B;
-    D[Lenguaje (L)] -- Conjunto de --> C;
-    E[Autómata] -- Procesa --> C;
+    A(Alfabeto (Σ)) --> B(Símbolos);
+    C(Cadena (String)) --> B;
+    D(Lenguaje (L)) --> C;
+    E(Autómata) --> C;
     E -- Acepta/Rechaza --> D;
-    F[Estados] -- Componente de --> E;
-    G[Transiciones] -- Componente de --> E;
-    H[Estado Inicial] -- Componente de --> E;
-    I[Estado de Aceptación] -- Componente de --> E;
+    F(Estados) --> E;
+    G(Transiciones) --> E;
+    H(Estado Inicial) --> E;
+    I(Estado de Aceptación) --> E;
 
     style A fill:#f9f,stroke:#333,stroke-width:2px
     style E fill:#ccf,stroke:#333,stroke-width:2px
