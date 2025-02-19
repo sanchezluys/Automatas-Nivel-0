@@ -284,7 +284,7 @@ Imagina que quieres crear un filtro de spam que detecte correos electrónicos qu
 
 #### 6. Ejercicios Resueltos de Autómatas. 📝
 
-===
+---
 
 ##### Ejercicio 1: AFD para Cadenas con un Número Impar de 'a's
 
@@ -292,7 +292,7 @@ Diseña un Autómata Finito Determinista (AFD) que acepte cadenas sobre el alfab
 
 ---
 
-**Página 2: Solución Explicada**
+**Solución Explicada**
 
 1.  **Estados:** Necesitamos dos estados:
     *   q0: Representa haber visto un número par de 'a's (estado inicial).
@@ -307,7 +307,7 @@ Diseña un Autómata Finito Determinista (AFD) que acepte cadenas sobre el alfab
 
 3.  **Diagrama de Estados:**
 
-![alt text](image.png)
+![alt text](/0_Introduccion/image.png)
 
 
 *   **Explicación:** El autómata comienza en q0 (par). Cada vez que ve una 'a', cambia de estado. Si termina en q1 al final de la cadena, significa que ha visto un número impar de 'a's, y la cadena es aceptada.
@@ -320,7 +320,7 @@ Diseña un Autómata Finito No Determinista (AFN) que acepte cadenas sobre el al
 
 ---
 
-**Página 2: Solución Explicada**
+**Solución Explicada**
 
 1.  **Estados:**
     *   q0: Estado inicial (no hemos visto nada relevante aún).
@@ -337,7 +337,7 @@ Diseña un Autómata Finito No Determinista (AFN) que acepte cadenas sobre el al
 
 3.  **Diagrama de Estados:**
 
-![alt text](image-1.png)
+![alt text](/0_Introduccion/image-1.png)
 
 *   **Explicación:** El autómata "busca" la secuencia "aba". Una vez que la encuentra, pasa al estado de aceptación y permanece allí, aceptando cualquier cadena que contenga "aba".
 
@@ -349,7 +349,7 @@ Escribe una expresión regular que describa el lenguaje de todas las cadenas sob
 
 ---
 
-**Página 2: Solución Explicada**
+**Solución Explicada**
 
 La expresión regular es: `a(a|b)*b`
 
@@ -383,7 +383,7 @@ Dado el siguiente AFN, conviértelo a un AFD equivalente:
 
 ---
 
-**Página 2: Solución Explicada**
+**Solución Explicada**
 
 1.  **Estado Inicial del AFD:** {q0}
 2.  **Transiciones desde {q0}:**
@@ -392,6 +392,9 @@ Dado el siguiente AFN, conviértelo a un AFD equivalente:
 3.  **Transiciones desde {q0, q1}:**
     *   Con 0: δ({q0, q1}, 0) = δ(q0, 0) ∪ δ(q1, 0) = {q0, q1} ∪ {} = {q0, q1} (estado ya existente)
     *   Con 1: δ({q0, q1}, 1) = δ(q0, 1) ∪ δ(q1, 1) = {q0} ∪ {q1} = {q0, q1} (estado ya existente)
+
+---
+
 4.  **Estados de Aceptación del AFD:** {q0, q1} (porque contiene q1, que es un estado de aceptación del AFN)
 
 **AFD Resultante:**
@@ -426,7 +429,7 @@ Describe en palabras el lenguaje aceptado por el siguiente AFD:
 
 ---
 
-**Página 2: Solución Explicada**
+**Solución Explicada**
 
 El AFD acepta todas las cadenas que contienen al menos una 'a' seguida inmediatamente por una 'b'.
 
@@ -443,6 +446,8 @@ El AFD acepta todas las cadenas que contienen al menos una 'a' seguida inmediata
 *   bab
 *   bbab
 *   aaabbb
+
+---
 
 **Ejemplos de cadenas rechazadas:**
 
