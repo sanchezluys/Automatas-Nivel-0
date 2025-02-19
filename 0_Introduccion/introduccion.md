@@ -90,6 +90,8 @@
 *   **Ejemplo 2: Validar Emails ✅:** Cuando te dicen que tu email es inválido ❌, un autómata revisó si tiene el formato correcto (algo@algo.com).
 *   **Ejemplo 3: Videojuegos 🎮:** La inteligencia artificial básica de los enemigos (patrullar 🚶, atacar ⚔️) usa autómatas.
 
+---
+
 ##### Ejercicio Práctico (¡Piensa como una Máquina! 🤔):
 
 Imagina que eres un autómata que debe decidir si una puerta automática se abre o no. La entrada es si alguien se acerca ("acercar") o se aleja ("alejar"). ¿Qué reglas (transiciones) seguirías?
@@ -98,7 +100,7 @@ Imagina que eres un autómata que debe decidir si una puerta automática se abre
 
 Dibuja un diagrama simple (a mano alzada ✍️) que represente la puerta automática. ¿Cuáles son los estados (abierta 🔓, cerrada 🔒)? ¿Cuáles son las transiciones?
 
----
+===
 
 #### 2. Conceptos Fundamentales 📚
 
@@ -122,14 +124,17 @@ Dibuja un diagrama simple (a mano alzada ✍️) que represente la puerta autom�
 *   **Ejemplo 2:** "hola" (cadena de letras)
 *   **Ejemplo 3:** "🔴 🟡 🟢" (cadena de colores de semáforo)
 
+---
+
 ##### Lenguaje (L): El Diccionario Aprobado ✅
 
->[!NOTE]
 > Un lenguaje es un conjunto de cadenas válidas.
 
 *   **Definición:** Un conjunto de cadenas formadas a partir de un alfabeto.
 *   **Ejemplo 1:** El lenguaje de todas las cadenas binarias que empiezan con "1": L = {1, 10, 11, 100, 101, ...}
 *   **Ejemplo 2:** El lenguaje de todas las palabras en español 🇪🇸.
+
+---
 
 ##### Estados, Transiciones, Estado Inicial y Estado de Aceptación: Las Reglas del Juego 🎲
 
@@ -137,6 +142,8 @@ Dibuja un diagrama simple (a mano alzada ✍️) que represente la puerta autom�
 *   **Transición:** Cómo el autómata cambia de un estado a otro al leer un símbolo de entrada ➡️.
 *   **Estado Inicial:** El estado donde el autómata comienza 🏁.
 *   **Estado de Aceptación:** Un estado que indica que la cadena de entrada es válida (pertenece al lenguaje) 🏆.
+
+---
 
 ##### Ejercicio Práctico (¡Crea tu Propio Lenguaje! 💡):
 
@@ -146,13 +153,12 @@ Define un alfabeto y crea un lenguaje de al menos 5 cadenas diferentes. Describe
 
 Imagina que quieres validar contraseñas que deben tener al menos 8 caracteres y contener al menos un número. ¿Cómo definirías el alfabeto y el lenguaje para este problema?
 
----
+===
 
 #### 3. Autómatas Finitos Deterministas (AFD) 🤖🔍
 
 ##### Definición Formal (¡No te Asustes! 🤯):
 
->[!NOTE]
 > Un AFD es un modelo matemático 📐 con 5 componentes: (Q, Σ, δ, q0, F)
 
 *   **Q:** Un conjunto finito de estados 📍.
@@ -161,10 +167,14 @@ Imagina que quieres validar contraseñas que deben tener al menos 8 caracteres y
 *   **q0:** El estado inicial (un estado de Q) 🏁.
 *   **F:** Un conjunto de estados de aceptación (un subconjunto de Q) 🏆.
 
+---
+
 ##### Ejemplos (¡Haciendo Conexiones! 🔗):
 
 *   **Ejemplo 1: El Interruptor de Luz 💡:** Un autómata con dos estados (encendido 🔆, apagado 🌑) y una entrada ("pulsar").
 *   **Ejemplo 2: Paridad de 1s:** Un autómata que acepta cadenas binarias con un número par de "1"s (ya lo vimos antes 😉).
+
+---
 
 ##### Construcción de AFDs (¡Manos a la Obra! 🛠️):
 
@@ -178,6 +188,8 @@ Imagina que quieres validar contraseñas que deben tener al menos 8 caracteres y
 2.  **Dibuja el diagrama de estados ✏️:** Dibuja los estados como círculos ⚪ y las transiciones como flechas ➡️.
 3.  **Define la función de transición:** Para cada estado y cada símbolo de entrada (0 o 1), dibuja una flecha al siguiente estado correcto.
 4.  **Define el estado inicial y los estados de aceptación:** Marca el estado inicial 🏁 y los estados de aceptación (en este caso, solo el estado "Acabo de ver un 01") 🏆.
+
+---
 
 ##### Ejercicio Práctico (¡Construye tu Propio AFD! 🏗️):
 
