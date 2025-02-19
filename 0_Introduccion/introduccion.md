@@ -187,7 +187,7 @@ Diseña un AFD que acepte cadenas que contengan la subcadena "ab". Dibuja el dia
 
 Simplificando mucho, imagina que quieres validar números de teléfono que deben empezar con "555". ¿Cómo diseñarías un AFD para esto? (Solo el diagrama de estados simplificado, no te preocupes por todos los detalles de los números de teléfono reales).
 
----
+===
 
 #### 4. Autómatas Finitos No Deterministas (AFN) 🤯🤔
 
@@ -200,6 +200,8 @@ Simplificando mucho, imagina que quieres validar números de teléfono que deben
 *   **δ:** Una función de transición que puede dar *un conjunto* de estados: δ(estado, símbolo) = {nuevo_estado1, nuevo_estado2, ...} ➡️.
 *   **q0:** El estado inicial (un estado de Q) 🏁.
 *   **F:** Un conjunto de estados de aceptación (un subconjunto de Q) 🏆.
+
+---
 
 ##### Ejemplos (¡La Aventura de Elegir! 🧭):
 
@@ -215,6 +217,8 @@ Simplificando mucho, imagina que quieres validar números de teléfono que deben
     2.  Para cada estado del AFD y cada símbolo del alfabeto, calcula a qué conjunto de estados del AFN puedes llegar. Ese conjunto se convierte en un nuevo estado del AFD.
     3.  Repite el paso 2 hasta que no puedas crear nuevos estados en el AFD.
     4.  Los estados de aceptación del AFD son aquellos que contienen *al menos un* estado de aceptación del AFN 🏆.
+
+---
 
 ##### Ejercicio Práctico (¡Convierte un AFN a AFD! 🔄):
 
@@ -258,5 +262,3 @@ Los AFNs son útiles para buscar patrones con cierta flexibilidad. Por ejemplo, 
 ##### Caso Práctico (El Filtro de Spam 🗑️):
 
 Imagina que quieres crear un filtro de spam que detecte correos electrónicos que contengan ciertas palabras clave (como "viagra" o "oferta"). ¿Cómo podrías usar los autómatas para esto? (Describe la idea general, no necesitas diseñar el autómata completo).
-
----
