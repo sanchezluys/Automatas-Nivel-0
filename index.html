@@ -75,6 +75,14 @@
 		<!-- Style file -->
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js-plugins@latest/style.css">
 
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.3/mermaid.min.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.3/mermaid.min.js"></script>
+		<script>
+			mermaid.initialize({ startOnLoad: true });
+		</script>
+
+
+
 		<!-- Customized style -->
 		<style>
 			:root {
@@ -114,10 +122,7 @@
 				</section>
 			</div>
 		</div>
-		<script type="module">
-			import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
-			mermaid.initialize({ startOnLoad: true });
-		</script>
+
 		<script>
 			// list of topics
 			// the src must be found within the folder, folders must be distinct!

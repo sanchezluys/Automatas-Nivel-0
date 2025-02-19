@@ -325,15 +325,11 @@ Diseña un Autómata Finito Determinista (AFD) que acepte cadenas sobre el alfab
 
 ##### Ejercicio 2: AFN para Cadenas que Contienen la Subcadena "aba"
 
-**Página 1: Ejercicio**
-
 Diseña un Autómata Finito No Determinista (AFN) que acepte cadenas sobre el alfabeto Σ = {a, b} que contengan la subcadena "aba".
 
 ---
 
 **Página 2: Solución Explicada**
-
-**Solución:**
 
 1.  **Estados:**
     *   q0: Estado inicial (no hemos visto nada relevante aún).
@@ -345,6 +341,9 @@ Diseña un Autómata Finito No Determinista (AFN) que acepte cadenas sobre el al
     *   Desde q1, con 'b', vamos a q2.
     *   Desde q2, con 'a', vamos a q3.
     *   Desde q3, podemos permanecer en q3 con 'a' o 'b' (para aceptar cualquier cosa después de "aba").
+
+---
+
 3.  **Diagrama de Estados:**
 
     ```mermaid
@@ -364,19 +363,15 @@ Diseña un Autómata Finito No Determinista (AFN) que acepte cadenas sobre el al
 
     *   **Explicación:** El autómata "busca" la secuencia "aba". Una vez que la encuentra, pasa al estado de aceptación y permanece allí, aceptando cualquier cadena que contenga "aba".
 
----
+===
 
 ##### Ejercicio 3: Expresión Regular para Cadenas que Empiezan con 'a' y Terminan con 'b'
-
-**Página 1: Ejercicio**
 
 Escribe una expresión regular que describa el lenguaje de todas las cadenas sobre el alfabeto Σ = {a, b} que comienzan con 'a' y terminan con 'b'.
 
 ---
 
 **Página 2: Solución Explicada**
-
-**Solución:**
 
 La expresión regular es: `a(a|b)*b`
 
@@ -392,11 +387,9 @@ La expresión regular es: `a(a|b)*b`
 *   aaabb
 *   ababab
 
----
+===
 
 ##### Ejercicio 4: Convertir un AFN a AFD (Simplificado)
-
-**Página 1: Ejercicio**
 
 Dado el siguiente AFN, conviértelo a un AFD equivalente:
 
@@ -413,8 +406,6 @@ Dado el siguiente AFN, conviértelo a un AFD equivalente:
 ---
 
 **Página 2: Solución Explicada**
-
-**Solución:**
 
 1.  **Estado Inicial del AFD:** {q0}
 2.  **Transiciones desde {q0}:**
@@ -437,11 +428,9 @@ Dado el siguiente AFN, conviértelo a un AFD equivalente:
     *   δ({q0, q1}, 0) = {q0, q1}
     *   δ({q0, q1}, 1) = {q0, q1}
 
----
+===
 
 ##### Ejercicio 5:  Lenguaje Aceptado por un AFD Dado
-
-**Página 1: Ejercicio**
 
 Describe en palabras el lenguaje aceptado por el siguiente AFD:
 
@@ -460,8 +449,6 @@ Describe en palabras el lenguaje aceptado por el siguiente AFD:
 ---
 
 **Página 2: Solución Explicada**
-
-**Solución:**
 
 El AFD acepta todas las cadenas que contienen al menos una 'a' seguida inmediatamente por una 'b'.
 
