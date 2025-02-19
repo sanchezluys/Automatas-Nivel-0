@@ -307,17 +307,8 @@ Diseña un Autómata Finito Determinista (AFD) que acepte cadenas sobre el alfab
 
 3.  **Diagrama de Estados:**
 
-```mermaid
-    graph LR
-        q0 -- a --> q1
-        q0 -- b --> q0
-        q1 -- a --> q0
-        q1 -- b --> q1
-        classDef start fill:#f9f,stroke:#333,stroke-width:2px
-        classDef accept fill:#ccf,stroke:#333,stroke-width:2px
-        class q1 accept
-        class q0 start
-```
+![alt text](image.png)
+
 
 *   **Explicación:** El autómata comienza en q0 (par). Cada vez que ve una 'a', cambia de estado. Si termina en q1 al final de la cadena, significa que ha visto un número impar de 'a's, y la cadena es aceptada.
 
@@ -346,22 +337,9 @@ Diseña un Autómata Finito No Determinista (AFN) que acepte cadenas sobre el al
 
 3.  **Diagrama de Estados:**
 
-    ```mermaid
-    graph LR
-        q0((q0)) -- a --> q1(q1)
-        q0 -- b --> q0
-        q0 -- a --> q0
-        q1 -- b --> q2(q2)
-        q2 -- a --> q3((q3))
-         q3 -- a --> q3
-         q3 -- b --> q3
-        classDef start fill:#f9f,stroke:#333,stroke-width:2px;
-        classDef accept fill:#ccf,stroke:#333,stroke-width:2px;
-        class q3 accept
-        class q0 start
-    ```
+![alt text](image-1.png)
 
-    *   **Explicación:** El autómata "busca" la secuencia "aba". Una vez que la encuentra, pasa al estado de aceptación y permanece allí, aceptando cualquier cadena que contenga "aba".
+*   **Explicación:** El autómata "busca" la secuencia "aba". Una vez que la encuentra, pasa al estado de aceptación y permanece allí, aceptando cualquier cadena que contenga "aba".
 
 ===
 
