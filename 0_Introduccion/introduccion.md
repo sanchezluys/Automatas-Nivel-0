@@ -29,11 +29,11 @@
 
 #### ⏳ Meta Final: Proyecto de Autómatas en GitHub
 
-<img src="0_Introduccion/automatas.webp" alt="automatas"	style="height: 600px; margin: 0 auto 4rem auto; background: transparent; box-shadow: 0 0 10px 10px rgb(150, 156, 238); border-radius: 20px;" class="demo-logo">
+<img src="0_Introduccion/plc.jpg" alt="automatas"	style="height: 600px; margin: 0 auto 4rem auto; background: transparent; box-shadow: 0 0 10px 10px rgb(150, 156, 238); border-radius: 20px;" class="demo-logo">
 
 ---
 
-#### 🛠️ Requisitos
+#### 🛠️ Requisitos 1/2
 
 <p class="fragment" data-fragment-index="1" style="text-align: left;">
   1. <strong>💻 Entorno de Desarrollo</strong>: IDE o editor de texto con soporte para programación y visualización de autómatas.
@@ -47,6 +47,11 @@
 <p class="fragment" data-fragment-index="4" style="text-align: left;">
   4. <strong>🧰 Herramientas de Visualización</strong>:  Software o bibliotecas para crear diagramas de estados claros y comprensibles (e.g., Graphviz, Mermaid.js).
 </p>
+
+---
+
+#### 🛠️ Requisitos 2/2
+
 <p class="fragment" data-fragment-index="5" style="text-align: left;">
   5. <strong>🌐 GitHub</strong>: Plataforma para versionar, compartir y colaborar en el proyecto de autómatas.
 </p>
