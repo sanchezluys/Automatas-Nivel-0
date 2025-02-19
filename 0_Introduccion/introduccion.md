@@ -485,5 +485,3 @@ El AFD acepta todas las cadenas que contienen al menos una 'a' seguida inmediata
 *   b
 *   bb
 *   aaa
-
----
