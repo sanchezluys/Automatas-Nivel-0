@@ -149,6 +149,7 @@ Dibuja un diagrama simple (a mano alzada ✍️) que represente la puerta autom�
 
 Define un alfabeto y crea un lenguaje de al menos 5 cadenas diferentes. Describe las reglas que definen tu lenguaje.
 
+
 ##### Caso Práctico (El Validador de Contraseñas 🛡️):
 
 Imagina que quieres validar contraseñas que deben tener al menos 8 caracteres y contener al menos un número. ¿Cómo definirías el alfabeto y el lenguaje para este problema?
@@ -172,6 +173,7 @@ Imagina que quieres validar contraseñas que deben tener al menos 8 caracteres y
 ##### Ejemplos (¡Haciendo Conexiones! 🔗):
 
 *   **Ejemplo 1: El Interruptor de Luz 💡:** Un autómata con dos estados (encendido 🔆, apagado 🌑) y una entrada ("pulsar").
+
 *   **Ejemplo 2: Paridad de 1s:** Un autómata que acepta cadenas binarias con un número par de "1"s (ya lo vimos antes 😉).
 
 ---
@@ -222,6 +224,8 @@ Simplificando mucho, imagina que quieres validar números de teléfono que deben
 ##### Conversión de AFN a AFD (¡Haciendo Trampa! 🤫):
 
 > Todo AFN puede convertirse a un AFD equivalente. Esto significa que puedes "simular" el no determinismo con un autómata determinista. 🤯
+
+---
 
 *   **Idea Principal:** Cada estado del AFD representa un *conjunto* de estados del AFN 📦.
 *   **Algoritmo:** (Simplificado)
