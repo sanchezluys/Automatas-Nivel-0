@@ -193,7 +193,6 @@ Simplificando mucho, imagina que quieres validar números de teléfono que deben
 
 ##### Definición Formal (¡Casi Igual que un AFD! 🤓):
 
->[!NOTE]
 > Un AFN es muy parecido a un AFD, pero con una diferencia clave: ¡puede tener múltiples opciones para el siguiente estado! 😲
 
 *   **Q:** Un conjunto finito de estados 📍.
@@ -208,7 +207,6 @@ Simplificando mucho, imagina que quieres validar números de teléfono que deben
 
 ##### Conversión de AFN a AFD (¡Haciendo Trampa! 🤫):
 
->[!NOTE]
 > Todo AFN puede convertirse a un AFD equivalente. Esto significa que puedes "simular" el no determinismo con un autómata determinista. 🤯
 
 *   **Idea Principal:** Cada estado del AFD representa un *conjunto* de estados del AFN 📦.
@@ -226,7 +224,7 @@ Dibuja un AFN que acepte cadenas que contengan "ab" (igual que el ejercicio del 
 
 Los AFNs son útiles para buscar patrones con cierta flexibilidad. Por ejemplo, buscar palabras que contengan "color" o "colour". ¿Cómo diseñarías un AFN para esto?
 
----
+===
 
 #### 5. Aplicaciones de los Autómatas 🚀
 
@@ -237,15 +235,21 @@ Los AFNs son útiles para buscar patrones con cierta flexibilidad. Por ejemplo, 
     *   **Análisis Léxico:** Un autómata divide tu código en "tokens" (palabras clave, operadores, variables, etc.) ✂️.
     *   **Análisis Sintáctico:** Otro autómata verifica que los tokens estén en el orden correcto (que la sintaxis de tu código sea correcta) ✅.
 
+---
+
 ##### Búsqueda de Patrones (¡Encontrar la Aguja en el Pajar! 🔎):
 
 *   **Función:** Encontrar una subcadena específica dentro de un texto más grande 📝.
 *   **Cómo se usan los Autómatas:** Puedes construir un autómata que acepte solo las cadenas que contienen el patrón que buscas. Luego, puedes usar ese autómata para buscar el patrón en el texto.
 
+---
+
 ##### Validación de Datos (¡Asegurando la Calidad! 🛡️):
 
 *   **Función:** Verificar que los datos que ingresa un usuario cumplen con un formato específico (emails 📧, números de teléfono 📱, códigos postales ✉️, etc.).
 *   **Cómo se usan los Autómatas:** Puedes construir un autómata que acepte solo las cadenas que cumplen con el formato deseado.
+
+---
 
 ##### Ejercicio Práctico (¡Piensa en Aplicaciones! 🤔):
 
