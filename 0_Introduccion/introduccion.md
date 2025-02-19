@@ -77,11 +77,12 @@
 
 ##### ¿Qué es un Autómata? (La Receta Secreta de las Máquinas ⚙️)
 
->[!NOTE]
 > Un autómata es como una receta 📜, un conjunto de instrucciones que una máquina sigue para procesar información.
 
 *   **Analogía 1: El Robot de Cocina 🧑‍🍳:** Imagina un robot que solo sabe hacer sándwiches. La receta (orden de poner pan, jamón, queso...) es el autómata.
 *   **Analogía 2: El Detector de Metales 探知機:** Cuando pasas un detector de metales, está buscando un patrón (metal 🪙). Si lo encuentra, "acepta" (hace ruido 🔔). Si no, "rechaza" (se queda callado 🔇).
+
+---
 
 ##### ¿Por qué son importantes los Autómatas? (¡Están en todas partes! 🌍)
 
@@ -103,7 +104,6 @@ Dibuja un diagrama simple (a mano alzada ✍️) que represente la puerta autom�
 
 ##### Alfabeto (Σ): Las Letras del Juego 🔤
 
->[!NOTE]
 > El alfabeto es el conjunto de todos los símbolos que el autómata puede "entender" 🧠.
 
 *   **Definición:** Un conjunto finito de símbolos.
@@ -111,9 +111,10 @@ Dibuja un diagrama simple (a mano alzada ✍️) que represente la puerta autom�
 *   **Ejemplo 2: Letras:** Σ = {a, b, c, ..., z} (todas las letras del alfabeto 🇦🇧🇨)
 *   **Ejemplo 3: Semáforo:** Σ = {🔴, 🟡, 🟢} (rojo, amarillo, verde)
 
+---
+
 ##### Cadena (String): La Palabra Secreta 🔑
 
->[!NOTE]
 > Una cadena es una secuencia de símbolos del alfabeto.
 
 *   **Definición:** Una secuencia finita de símbolos del alfabeto.
