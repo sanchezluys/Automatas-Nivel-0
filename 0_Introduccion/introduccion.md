@@ -96,6 +96,7 @@
 
 Imagina que eres un autómata que debe decidir si una puerta automática se abre o no. La entrada es si alguien se acerca ("acercar") o se aleja ("alejar"). ¿Qué reglas (transiciones) seguirías?
 
+
 ##### Caso Práctico (La Puerta Automática 🚪):
 
 Dibuja un diagrama simple (a mano alzada ✍️) que represente la puerta automática. ¿Cuáles son los estados (abierta 🔓, cerrada 🔒)? ¿Cuáles son las transiciones?
@@ -308,12 +309,12 @@ Diseña un Autómata Finito Determinista (AFD) que acepte cadenas sobre el alfab
 
 ```mermaid
     graph LR
-        q0((q0)) -- a --> q1((q1))
+        q0 -- a --> q1
         q0 -- b --> q0
         q1 -- a --> q0
         q1 -- b --> q1
-        classDef start fill:#f9f,stroke:#333,stroke-width:2px;
-        classDef accept fill:#ccf,stroke:#333,stroke-width:2px;
+        classDef start fill:#f9f,stroke:#333,stroke-width:2px
+        classDef accept fill:#ccf,stroke:#333,stroke-width:2px
         class q1 accept
         class q0 start
 ```
